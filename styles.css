@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
     --main-darkblue: #1F2937;
     --main-white: #F9FAF8;
     --main-lightblue: #3882F6;
     --main-darkgray: #2c2e2c;
+    --main-light: #1F2937;
+    --main-background: #E5E7EB;
 }
 
 * {
@@ -13,13 +17,12 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.4;
-    min-height: 100vh;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -39,8 +42,9 @@ aside {
     flex: 0 0 5%;
 }
 
-section {
-    height: 25vh;
+.sec-1, .sec-2, .sec-3 {
+    flex: 1;
+    height: auto;
 }
 
 .sidebar1 {
@@ -53,17 +57,41 @@ section {
 
 .container {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    gap: 10rem;
+    padding: 20px;
+    text-align: center;
+   
 }
 
 .content {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    width: 4rem;
+    border: 1px solid red;
 }
 
 .box {
-    height: 1.6rem;
-    width: calc(25% - 10px);
-    border: 2px solid var(--main-lightblue);
+    border-radius: 10px;
+    border: 4px solid var(--main-lightblue);
+    width: 10rem;
+    height: 10rem;
+}
+
+.content p {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid red;
 }
 
 .sec-1 {
@@ -76,8 +104,44 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 .sec-2 h1 {
  color: var(--main-darkblue);
+}
+
+.sec-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-background);
+}
+
+.quote {
+    width: 61%;
+    height: 65%;
+    padding: 12px;
+    margin: 4.5rem auto;
+    
+}
+
+.quote p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    word-wrap: break-word;
+    font-weight: 300;
+    font-size: 36px;
+    color: var(--main-light);
+    font-style: italic;
+}
+
+.break {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: auto;
+    font-style: normal;
+    
 }
